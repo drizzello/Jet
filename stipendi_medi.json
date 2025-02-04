@@ -1,0 +1,75 @@
+{
+   "stipendi": [
+     {
+       "professione": "Software Engineer",
+       "ral_media": 38000,
+       "ral_min": 30000,
+       "ral_max": 55000,
+       "settore": "Tecnologia"
+     },
+     {
+       "professione": "Data Scientist",
+       "ral_media": 42000,
+       "ral_min": 35000,
+       "ral_max": 65000,
+       "settore": "Tecnologia"
+     },
+     {
+       "professione": "Project Manager",
+       "ral_media": 50000,
+       "ral_min": 40000,
+       "ral_max": 70000,
+       "settore": "Management"
+     },
+     {
+       "professione": "Marketing Manager",
+       "ral_media": 45000,
+       "ral_min": 35000,
+       "ral_max": 60000,
+       "settore": "Marketing"
+     },
+     {
+       "professione": "Graphic Designer",
+       "ral_media": 28000,
+       "ral_min": 22000,
+       "ral_max": 40000,
+       "settore": "Creativo"
+     },
+     {
+       "professione": "Commerciale/Vendite",
+       "ral_media": 35000,
+       "ral_min": 25000,
+       "ral_max": 50000,
+       "settore": "Vendite"
+     },
+     {
+       "professione": "HR Manager",
+       "ral_media": 48000,
+       "ral_min": 38000,
+       "ral_max": 65000,
+       "settore": "Risorse Umane"
+     },
+     {
+       "professione": "Avvocato",
+       "ral_media": 55000,
+       "ral_min": 40000,
+       "ral_max": 85000,
+       "settore": "Legale"
+     },
+     {
+       "professione": "Medico",
+       "ral_media": 60000,
+       "ral_min": 45000,
+       "ral_max": 100000,
+       "settore": "Sanità"
+     },
+     {
+       "professione": "Ingegnere Meccanico",
+       "ral_media": 42000,
+       "ral_min": 35000,
+       "ral_max": 60000,
+       "settore": "Ingegneria"
+     }
+   ]
+ }
+ 
