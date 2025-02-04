@@ -255,22 +255,26 @@ if st.button("Calcola Stipendio Netto & Costo Aziendale"):
    else:
       st.warning(f"🔺 La tua RAL è **minore** alla media di mercato ({ral_media_mercato} €)")
 
-   # Grafico a torta della distribuzione delle tasse
+
    st.subheader("📊 Distribuzione del Reddito")
+
    addizionali = addizionale_regionale + addizionale_comunale
-   labels = ["Stipendio Netto", "IRPEF", "Inps", "Addizionali" ]
+   labels = ["Stipendio Netto", "IRPEF", "Inps", "Addizionali"]
    valori = [stipendio_netto_annuo, irpef, inps, addizionali]
 
    fig1, ax1 = plt.subplots()
-   # Aggiunge le percentuali sopra la torta e la legenda
-   wedges, texts, autotexts = ax1.pie(valori, labels=labels, autopct='%1.1f%%', startangle=90, colors=["#4CAF50", "#FF5733", "#FFC300", "#3498db"])
 
-   # Aggiunge legenda fuori dal grafico per evitare sovrapposizioni
-   ax1.legend(wedges, labels, title="Legenda", loc="center left", bbox_to_anchor=(1, 0.5))
+   # Creazione del grafico a torta SENZA percentuali sopra
+   wedges, texts = ax1.pie(
+      valori, labels=None, startangle=90, colors=["#4CAF50", "#FF5733", "#FFC300", "#3498db"]
+   )
+
+   # Creazione della legenda con le percentuali
+   percentuali = [f"{label}: {val:.1f}%" for label, val in zip(labels, [(v / sum(valori)) * 100 for v in valori])]
+   ax1.legend(wedges, percentuali, title="Legenda", loc="center left", bbox_to_anchor=(1, 0.5))
 
    ax1.axis("equal")  # Assicura che il grafico sia un cerchio perfetto
    st.pyplot(fig1)
-
 
    # Grafico a barre per costo aziendale
    st.subheader("📊 Costo Aziendale vs Stipendio Netto")
